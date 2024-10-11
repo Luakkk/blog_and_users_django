@@ -31,12 +31,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blog_platform.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],  # Path to the global templates directory
+        'APP_DIRS': True,  # This ensures Django looks inside each app’s templates directory
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
